@@ -1,5 +1,5 @@
-    {
-        "compilerOptions": {
+{
+    "compilerOptions": {
         "target": "es5",
         "module": "commonjs",
         "rootDir": "./src",
@@ -14,7 +14,8 @@
         "forceConsistentCasingInFileNames": true,
         "strictNullChecks": true,
         "skipLibCheck": true,
-        },
-        // "include": ["src/**/*.ts"],
-        // "exclude": ["node_modules"],
-    }
+        "declaration": true // Added declaration option
+    },
+    "include": ["src/**/*.ts"], // Uncommented and specified source files
+    // "exclude": ["node_modules"],
+}
