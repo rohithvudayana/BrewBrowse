@@ -26,10 +26,10 @@ try{
     console.error(error);
 }
 
-app.use(cors({}))
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+app.use(cors({}))
 
 app.use("/ok", (_req, _res) => {   _res.status(200).send(httpResponse(true, "OK", {}))   })
 
