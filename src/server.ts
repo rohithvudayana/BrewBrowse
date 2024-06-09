@@ -7,7 +7,7 @@ import { errorHandler } from "./middleware/errorHandler";
 import { authRouter } from "./routes/authRoutes";
 import {reviewRouter} from "./routes/reviewRoutes";
 import { breweRouter } from "./routes/breweRoutes";
-import { authenticateToken } from "./middleware/authToken";
+import cors from "cors";
 
 dotenv.config();
 
@@ -25,6 +25,8 @@ try{
 } catch (error) {
     console.error(error);
 }
+
+app.use(cors({}))
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));

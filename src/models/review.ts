@@ -3,7 +3,6 @@ import mongoose, { Schema, Document, Model } from 'mongoose';
 interface IReview extends Document {
   reviewID: string;
   reviewArray: {
-    owner: string;
     review: string;
     rated: number;
   }[];
@@ -14,7 +13,6 @@ const reviewSchema: Schema = new Schema({
   reviewID: { type: String, required: true, unique: true },
   reviewArray: [
     {
-      owner: { type: String },
       review: { type: String, required: true },
       rated: { type: Number, required: true },
     },
