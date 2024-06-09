@@ -11,6 +11,7 @@ import cors from "cors";
 dotenv.config();
 
 export const app = express();
+app.use(cors())
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
@@ -20,6 +21,5 @@ app.use(`/auth`, authRouter);
 app.use(`/review`, reviewRouter);
 app.use(`/brewery`, breweRouter);
 
-app.use(cors())
 app.use(routeNotFound);
 app.use(errorHandler);
