@@ -20,6 +20,6 @@ app.use(`/auth`, authRouter);
 app.use(`/review`, reviewRouter);
 app.use(`/brewery`, breweRouter);
 
-app.use(cors({}))
+app.use(cors())
 app.use(routeNotFound);
 app.use(errorHandler);
